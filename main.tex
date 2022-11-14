@@ -1,0 +1,122 @@
+%페이지 세팅
+\documentclass[9.5pt,a4paper]{article}
+\setlength{\parindent}{0em}                  %DISTANCIA SANGRÍA
+\setlength{\parskip}{0.5em}                  %DISTANCIA ENTRE PÁRRAFOS
+\textwidth 6.5in
+\textheight 9.in
+\oddsidemargin 0in
+\headheight 0in
+
+\usepackage{amsmath}
+\usepackage{tcolorbox}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{accents}
+\usepackage{setup}
+\usepackage{import}
+\usepackage{fancyhdr}
+\usepackage{layouts}
+\addtolength{\voffset}{0mm}
+\addtolength{\textheight}{0mm}
+
+\usemintedstyle{manni}
+
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+\linespread{1.15}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % 매주 리포트를 작성할때 이 부분을 수정하면 보고서 전체가 수정된다. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 작성하는 주차 
+\newcommand{\numnum}{03}
+% 이번 실험의 부제목 
+% \newcommand{\subtitle}{Install Unity, SMPL Application and OBJ format}
+\newcommand{\subtitle}{OOP Basic}
+
+\renewcommand{\listingscaption}{\footnotesize \textbf{python code}}
+%-------------------------------------------------------------------------
+%--> 떠다니는 객체 사용하는 부분 
+\usepackage{wrapfig}
+\newenvironment{problem}[2][Problem]  
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+%-------------------------------------------------------------------------
+\begin{document}
+\pagestyle{fancy}
+\fancyhf{}
+    \rhead{\small 2016142096 조윤신}
+    \lhead{\textsc{Homework \numnum \quad\subtitle}}
+\cfoot{\thepage}
+\renewcommand\headrulewidth{0.3mm}
+%\renewcommand\footrulewidth{0.3mm}
+\thispagestyle{plain}
+\begin{flushleft}
+\textsc{School of Electrical and Electronic of Enginnering} \\
+\textsc{eee 3545-01 : Application Programming}\\[0.1cm]
+\small{\textsc{ 2016142096 \textbf{조윤신}}}\\
+\end{flushleft}
+%-------------------------------------------------------------------------
+\begin{flushright}\vspace{-25mm}
+    \includegraphics[height=3cm]{image/1.jpg}
+    \vspace{5mm}
+\end{flushright}
+    \begin{center}\vspace{-2cm}
+        \textbf{\huge HomeWork \numnum}\\ 
+        \vspace{0.6mm}
+        {\large \subtitle}\\           
+    \end{center}
+\vspace{-5mm}
+\rule{\linewidth}{0.4mm}
+\vspace{-5mm}
+% % main documents
+%     \begin{mdframed}[backgroundcolor = gray!20] 
+%         \vspace{-5mm}
+%         \begin{center}
+%             \subsubsection*{\large Homework Notice}
+%                 \vspace{-2mm}
+%                 \begin{itemize}
+%                     \item {\small 
+%                     Problem 1에 해당하는 태양, 지구 그리고 달의 자전과 공전을 담은 씬과 Problem 3에 해당하는 
+%                     main camera의 display의 결과물을 각각 스크린 캡처했습니다.}
+%                     \vspace{-2mm}
+%                     \item {\small 비디오 파일은 유튜브에 업로드 하였습니다. 링크는 
+%                     아래에서 확인할 수 있습니다.}
+%                     \vspace{-2mm}
+%                     \begin{itemize}
+%                         \item \href{https://youtu.be/RvKIJbZvhXQ}
+%                 		{HomeWork 02 - Problem 1 : Recorded Video Youtube Link}
+%                 		\item \href{https://youtu.be/ssXaoGTbSxE}
+%                 		{HomeWork 02 - Problem 3 : Recorded Video Youtube Link} 
+%                     \end{itemize}
+%                     % \item  {\small 
+%                     % Pynq 보드가 어떻게 Audio를 출력하는지 이해하기
+%                     % }
+%                 \end{itemize}
+%         \end{center}
+%     \end{mdframed}
+    
+% 모든 프로그래밍 편집기 (IDE)에서 원도우 기준으로 '컨트롤 + /'를 누르면 
+% 커서가 활성화된 line의 주석처리를 해제 지정할 수 있다. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                    % Report 1    Due : 09/14   개인
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \import{./TEX/Report_01}{01}
+% \import{./TEX/Report_01}{02}
+%-------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                    % Report 2    Due : 09/14
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \import{./TEX/Report_02}{01}
+%-------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                    % Report 2    Due : 11/16
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\import{./TEX/Report_03}{01}
+%-------------------------------------------------------------------------
+\end{document}
